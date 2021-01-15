@@ -214,52 +214,6 @@ def bayes_theorem(df, col1, event1, col2, event2):
     Returns:
     prob -- calculated probability for the event1 given event2 has already occured
     """
-    #newdf = df[df['country'] == 'Kenya']
-    #p_event1 = calculate_probability_discrete('Kenya','banking_crisis')
-
-    #if col2 == 'systemic_crisis':
-    #    p_event2 = calculate_probability_discrete('Kenya','systemic_crisis')
-    #    a = np.array(newdf['banking_crisis'])
-    #    b = np.array(newdf['systemic_crisis'])
-    #    print(pd.crosstab(a,b))
-    #    table = pd.crosstab(a,b)
-    #    x = table.iloc[0,1]
-    #    y = table.iloc[0,:].sum()
-    #    p_b_a = x/y
-    #
-    #    # p_a_b
-    #    prob = (p_b_a*p_event1)/p_event2
-    #    return prob
-
-
-    #elif col2 == 'inflation_crises':
-    #    p_event2 = calculate_probability_discrete('Kenya','inflation_crises')
-    #    a = np.array(newdf['banking_crisis'])
-    #    c = np.array(newdf['inflation_crises'])
-    #    print(pd.crosstab(a,c))
-    #    table = pd.crosstab(a,c)
-    #    x = table.iloc[0,1]
-    #    y = table.iloc[0,:].sum()
-    #    p_c_a = x/y
-    #
-    #    # p_a_c
-    #    prob = (p_c_a*p_event1)/p_event2
-    #    return prob
-
-    #elif col2 == 'currency_crises':
-    #    p_event2 = calculate_probability_discrete('Kenya','currency_crises')
-    #    a = np.array(newdf['banking_crisis'])
-    #    d = np.array(newdf['currency_crises'])
-    #    print(pd.crosstab(a,d))
-    #    table = pd.crosstab(a,d)
-    #    x = table.iloc[0,1]
-    #    y = table.iloc[0,:].sum()
-    #    p_d_a = x/y
-    #
-    #    # p_a_d
-    #    prob = (p_d_a*p_event1)/p_event2
-    #    return prob
-
     p1 = len(df[df[col1] == event1])/len(df)
     
     if col2 == 'systemic_crisis':
